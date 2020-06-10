@@ -4,9 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+nodemon.json
+theme.txt
+development.txt
 
 # testing
 /coverage
+/test
 
 # production
 /build

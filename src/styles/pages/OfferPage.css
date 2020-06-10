@@ -1,0 +1,48 @@
+.offer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.offer-details header {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    background: #455a64;
+    color: #fff;
+    width: 400px;
+}
+
+.offer-details h1 {
+    color: inherit;
+    margin-right: 8px;
+    text-transform: capitalize;
+}
+
+.cup {
+    margin-right: 8px;
+    width: min-content;
+}
+
+.offer-details section {
+    margin-bottom: 6px;
+    min-width: 400px;
+    text-align: start;
+}
+
+.offer-details button {
+    max-width: calc(100% - 12px);
+    min-width: 400px;
+    border-radius: 6px;
+}
+
+@media (max-width: 412px) {
+    .offer-details header {
+        width: unset;
+    }
+    .offer-details button, .offer-details section {
+        min-width: calc(100% - 12px);
+    }
+}

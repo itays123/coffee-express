@@ -1,0 +1,29 @@
+form.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 300px;
+}
+
+form.feedback * {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.feedback input, 
+.feedback textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 4px;
+
+    outline: none;
+    resize: none;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.feedback textarea {
+    height: 5rem;
+}

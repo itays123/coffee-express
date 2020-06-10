@@ -1,0 +1,9 @@
+.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.shop h2 {
+    text-align: center;
+}

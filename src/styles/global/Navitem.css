@@ -1,0 +1,65 @@
+.nav-item a, .nav-item button {
+    height: 3rem;
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav-item a.active,
+.nav-item a:hover {
+    background-color: #b6ffff;
+}
+
+.nav-item a *, .nav-item button * { margin: 0; }
+
+.nav-item span {
+    font-size: inherit;
+    color: #455a64;
+}
+
+.nav-item.highlighted span {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-item .icon {
+    color: #455a64;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item i {
+    font-size: 28px;
+}
+
+.nav-item .status {
+    min-width: 10px;
+    width: min-content;
+    height: 10px;
+    background-color: #de4545;
+    border-radius: 50%;
+    position: absolute;
+    left: 2rem;
+    color: white;
+    font-size: 8px;
+    text-align: center;
+    padding: 1px;
+}
+
+.nav-item:nth-child(1) .status { top: calc((1 * 3rem) + 10px + 8px) }
+.nav-item:nth-child(2) .status { top: calc((2 * 3rem) + 10px + 8px) }
+.nav-item:nth-child(3) .status { top: calc((3 * 3rem) + 10px + 8px) }

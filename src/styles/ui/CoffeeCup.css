@@ -1,0 +1,27 @@
+.cup-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.coffee-cup {
+    background-color: #90a4ae;
+    border-radius: 0 0 40% 40%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: flex-end;
+    border-style: solid;
+    border-color: #90a4ae;
+    border-top: none;
+}
+
+.cup-container .dec {
+    border-style: solid;
+    border-color: #90a4ae;
+    border-left: none;
+    box-sizing: border-box;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

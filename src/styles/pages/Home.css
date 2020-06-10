@@ -1,0 +1,73 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.home .card {
+    max-width: 760px;
+    width: 100%;
+}
+
+.home section {
+    margin-top: 24px;
+}
+
+.home header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home header h1 { 
+    margin: 0;
+    font-size: 2rem;
+}
+
+.home header img {
+    width: 5rem;
+    font-size: 0;
+    margin-right: 20px;
+}
+
+@media (max-width: 1024px) {
+    .home header h1 { font-size: 2rem; }
+    .home header img { width: 3rem; }
+}
+
+
+
+.home section.about,
+.home section.contact {
+    text-align: center;
+}
+
+.home section.about h2, 
+.home section.about p {
+    line-height: 1.6rem;
+}
+
+
+
+.home section.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.home section.available-sails {
+    width: 100%;
+    text-align: center;
+}
+
+.home > p {
+    margin-top: 4px;
+}
+
+.home .offer {
+    border: 1px solid #90a4ae;
+}

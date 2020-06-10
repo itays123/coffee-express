@@ -1,0 +1,28 @@
+.nav-action {
+    color: #455a64;
+    height: 2.4rem;
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    padding-left: 3rem;
+    cursor: pointer;
+}
+
+.nav-action:hover {
+    background-color: #b6ffff;
+}
+
+.nav-action .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-action .icon i {
+    font-size: 18px;
+}

@@ -1,0 +1,47 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cart .card {
+    max-width: 760px;
+    width: 100%;
+}
+
+.cart header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart header i {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.cart header button {
+    min-width: unset;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: #81d4fa;
+    cursor: pointer;
+}
+
+.cart button {
+    margin-top: 6px;
+    max-width: calc(100% - 12px);
+    min-width: 760px;
+    border-radius: 6px;
+}
+
+@media (max-width: 772px) {
+    .cart button {
+        min-width: calc(100% - 12px);
+    }
+}
