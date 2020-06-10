@@ -37,6 +37,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `npm run server`
+
+**Runs the server with nodemon**
+
+### `npm run dev`
+
+This script is used for development.<br />
+It runs **`npm run server` and `npm start`** at the same time, 
+so the frontend can interact with the backend.
+
+### `npm run add-offer` and `npm run add-store`
+
+These scripts run a query that adds an offer or a store to the database, and it's completely independent from the frontend.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
