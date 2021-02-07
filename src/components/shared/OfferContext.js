@@ -36,7 +36,7 @@ const OfferContextProvider = ({ children }) => {
         if (offers.length === 0) return [];
         
         const isSignedIn = token && token !== 'null';
-        if (isSignedIn) {
+        if (isSignedIn && user.lastOffers) {
             return user.lastOffers.length > 2 ? [ ...(new Set(user.lastOffers)) ] : [...offers].reverse();
         } else return [...offers].reverse();
     };
