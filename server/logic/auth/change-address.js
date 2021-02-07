@@ -1,4 +1,4 @@
-const { Users } = require('../models');
+const { Users } = require('../../models');
 const { mapUser } = require('../global');
 
 module.exports = async ({ address }, { userId }) => {

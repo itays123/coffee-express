@@ -1,4 +1,4 @@
-const { Stores } = require('../models');
+const { Stores } = require('../../models');
 
 module.exports = async coor => {
     const coordinates = [ parseFloat(coor[0]), parseFloat(coor[1]) ];

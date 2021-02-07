@@ -3,9 +3,9 @@ const app = express();
 const { connect } = require('mongoose');
 
 app.use(require('body-parser').json());
-app.use(require('./middleware/cors'));
-app.use(require('./middleware/check-auth'));
-app.use('/api', require('./middleware/graphQL'));
+app.use(require('./server/middleware/cors'));
+app.use(require('./server/middleware/check-auth'));
+app.use('/api', require('./server/middleware/graphQL'));
 
 connect(
     process.env.DB_URL,

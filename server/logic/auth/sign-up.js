@@ -1,6 +1,6 @@
 const getUserByEmail = require('./get-user');
 const encryptPassword = require('./enctypt-password');
-const { Users } = require('../models');
+const { Users } = require('../../models');
 const { mapUser } = require('../global');
 const { sign } = require('jsonwebtoken');
 

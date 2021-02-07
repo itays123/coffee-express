@@ -1,4 +1,4 @@
-const Stats = require('../models/stats');
+const Stats = require('../../models/stats');
 const { sendEmail } = require('../global');
 
 module.exports = async ({ rating, review, name }) => {

@@ -1,4 +1,4 @@
-const { Offers } = require('../models');
+const { Offers } = require('../../models');
 const { mapOffer } = require('../global');
 
 module.exports = async () => {

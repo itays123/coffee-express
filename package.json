@@ -28,8 +28,8 @@
     "server": "nodemon index.js",
     "backend": "npm run server && npm run test",
     "dev": "run-p server start",
-    "add-offer": "nodemon scripts/add-offer.js",
-    "add-store": "nodemon scripts/add-store.js"
+    "add-offer": "nodemon server/scripts/add-offer.js",
+    "add-store": "nodemon server/scripts/add-store.js"
   },
   "eslintConfig": {
     "extends": "react-app"

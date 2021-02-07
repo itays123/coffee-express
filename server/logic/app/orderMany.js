@@ -1,6 +1,6 @@
 const getGeoLocation = require('./get-location');
 const pickClosestStore = require('./find-store');
-const { Offers, Users } = require('../models');
+const { Offers, Users } = require('../../models');
 const formatOrderData = require('./formay-many-emails');
 const { sendEmail } = require('../global')
 
