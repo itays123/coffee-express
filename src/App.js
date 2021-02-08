@@ -1,16 +1,16 @@
 import React from 'react';
-import './styles/global/App.css';
-import AppContextProvider from './components/app/AppContext';
-import Navbar from './components/layout/Navbar';
+import './App.css';
+import AppContextProvider from './layout/AppContext';
+import Navbar from './layout/Navigation/Navbar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/app/Home';
-import Shop from './components/app/Shop';
-import CartContextProvider from './components/shared/CartContext';
-import OfferContextProvider from './components/shared/OfferContext';
-import OfferPage from './components/app/OfferPage';
-import Cart from './components/app/Cart';
-import AuthContextProvider from './components/auth/AuthContext';
-import ForgotPassword from './components/auth/ForgotPassword';
+import Home from './layout/Home';
+import Shop from './offers/Shop';
+import CartContextProvider from './cart/CartContext';
+import OfferContextProvider from './offers/OfferContext';
+import OfferPage from './offers/OfferPage';
+import Cart from './cart/Cart';
+import AuthContextProvider from './auth/AuthContext';
+import ForgotPassword from './auth/password/ForgotPassword';
 
 function App() {
   return (
