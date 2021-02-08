@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and programmed with passion by me.
+
+# Coffee Express
+
+This is an online coffee shop, created with GraphQL and the MERN stack - MongoDB, Express.js, React.js and Node.js
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the create-react app built in scripts and a few of my own:
 
 ### `npm start`
 
@@ -51,32 +55,67 @@ so the frontend can interact with the backend.
 
 These scripts run a query that adds an offer or a store to the database, and it's completely independent from the frontend.
 
-## Learn More
+## Devops
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Server Environment Variables
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order for the server to work correctly, add these 3 environment variables to an `.env` file in the root directory:
+- `DB_URL` is the url of your MongoDB database. Either use a MongoDB Atlas URL, or the dockerized MongoDB version of it in `mongodb://mongo:27017/coffee`
+- `AUTH_TOKEN` is a custom string that will be used for encrypting the authentication token.
+- `PASSWORD` is a custom string responsible for the mailing system to work. If you wish to use it, change the email in use.
 
-### Code Splitting
+### Docker
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+As of February 2021, this project has a full docker support.
 
-### Analyzing the Bundle Size
+## Architecture
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Frontend Components
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The frontend is created with React.js and create-react-app. When entering the `src` folder, you will find a various of components:
+- auth
+    - address
+        - `AddressForm` - responsible for collecting address information
+        - `ChangeAddressModal` - responsible for changing the registrered address of an authenticated user.
+    - form
+        - `AddressForm` - responsible for collecting emails and passwords.
+    - password
+        - `ChangePasswordModal` - responsible for change the registrered password of authenticated users.
+        - `ForgotPassword`- the page responsible for changing the password, after email confirmation.
+        - `ForgotPasswordModal` - responsible for sending an email confirmation for users who forgot their passwords.
+    - `AuthContext` - responsible for fetching and storing auth data.
+    - `LoginModal` - responsiblle for the logging in functionality.
+    - `SignupModal` - responsible for the registering functionality.
+- cart
+    - `Cart` - the page responsible for displaying the current cart in memory.
+    - `CartConfirm` - responsible for picking an address to ship the offer to.
+    - `CartContext` - responsible for fetching purshase operations and storing the cart.
+    - `CartItem` - responsible for displaying an individual cart item.
+- layout
+    - feedback
+        - `Feedback` is the component respnsible for submitting feedbacks to the system.
+        - `Rating` is the 5-star ating system.
+    - Loading
+        - `Loading` is the CSS loading spinner.
+    - Modal
+        - `Modal` is an higher-order component responsible for showing modals on the screen
+        - `Notification` is a component that displays a small message in the screen
+    - Navigation
+        - `NavAction` is a customizeable button for navbar actions
+        - `Navbar` is the wrapper of the desired links and actions to display
+        - `NavItem` is a custom navlink, combined with an icon.
+        - `SignedInLinks` is the list of links and actions relevant for signed in users.
+        - `SignedOutLinks` is the list of links and actions relevant for unauthenticated users.
+    - `AppContext` controls the flow of loading and notifications.
+    - `Home` is the page containing information for various parts of the site.
+- offers
+    - CoffeeCup
+        - `CoffeeCup` is responsible for displaying a custom-sized cup of coffee with custom ingredients (from bottom to top)
+    - Offer
+        - `AllOffers` is a component displaying all offers, ordered by date.
+        - `LastOffers` is a component displaying last offers of authenticated users and recently added offers of unauthenticated users.
+        - `Offer` is a component responsible for displaying a single offer.
+    - `OfferContext` is a component responsible for fetching and storing offer data.
+    - `OfferPage` is a dynamic route responsible for displaying offers.
+    - `Shop` is a route displaying all offers and last offers.
+- `App` is the main component.
