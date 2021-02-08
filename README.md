@@ -60,7 +60,7 @@ These scripts run a query that adds an offer or a store to the database, and it'
 ### Server Environment Variables
 
 In order for the server to work correctly, add these 3 environment variables to an `.env` file in the root directory:
-- `DB_URL` is the url of your MongoDB database. Either use a MongoDB Atlas URL, or the dockerized MongoDB version of it in `mongodb://mongo:27017/coffee`
+- `DB_URL` is the url of your MongoDB database. Either use a MongoDB Atlas URL, or the dockerized MongoDB version of it. If you wish touse the dockerized version of Mongo, simply add it to the docker-compose-file and change the DB_URL environment variable.
 - `AUTH_TOKEN` is a custom string that will be used for encrypting the authentication token.
 - `PASSWORD` is a custom string responsible for the mailing system to work. If you wish to use it, change the email in use.
 
