@@ -25,7 +25,7 @@ const Home = () => {
         <div className="home">
             <header className="card">
                 <img src={logo} alt='' />
-                <h1>The Best Coffee In The Galaxy!</h1>
+                <h1>The Best Coffee On The Planet!</h1>
             </header>
             <section className="available-sails">
                 <h2>Available sails</h2>
