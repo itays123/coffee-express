@@ -14,11 +14,8 @@ services:
     ports:
       - "8000:8000"
       - "27017:27017"
-    environment:
-      - NODE_ENV=development
-      - DB_URL=mongodb+srv://itay:itays205@mycluster-afnwv.mongodb.net/coffee?retryWrites=true&w=majority
-      - AUTH_TOKEN=supersecretstringthatisusedtovlidatetheauthtoken
-      - PASSWORD=mocha2020
+    env_file: 
+      - .env
     networks:
       - app-network
   client:
